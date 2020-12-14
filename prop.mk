@@ -19,3 +19,6 @@ persist.camera.eis.enable=1
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.delta_time.enable=true \
 persist.delta_time.enable=true
+
+# OTA
+lineage.updater.uri=https://raw.githubusercontent.com/laityts/android_lineage_OTA/master/lineage_tiffany.json
