@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    MiuiCamera \
     camera.msm8953 \
     libmm-qcamera
 
@@ -42,6 +43,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
+    
+# MiuiCamera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-MiuiCamera.xml:system/etc/permissions/privapp-permissions-MiuiCamera.xml
 
 # Properties
 -include device/xiaomi/tiffany/prop.mk
@@ -69,3 +74,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk_package \
     libstdc++.vendor
+
+# Call the camera setup
+$(call inherit-product, vendor/xiaomi/MiuiCamera/MiuiCamera-vendor.mk)
+$(call inherit-product, vendor/xiaomi/MiuiCamera/tiffany.mk)
