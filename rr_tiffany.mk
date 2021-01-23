@@ -32,6 +32,9 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 5X
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+IS_PHONE := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -40,3 +43,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/tiffany/tiffany:7.1.2/N2G47H/V9.2.2.0.NDBCNEK:user/release-keys"
+
+TARGET_FACE_UNLOCK_SUPPORTED := true

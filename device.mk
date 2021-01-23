@@ -74,3 +74,7 @@ PRODUCT_PACKAGES += \
 # Call the camera setup
 $(call inherit-product, vendor/xiaomi/MiuiCamera/MiuiCamera-vendor.mk)
 $(call inherit-product, vendor/xiaomi/MiuiCamera/tiffany.mk)
+
+#Gapps
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
